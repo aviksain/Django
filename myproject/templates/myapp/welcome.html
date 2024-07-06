@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=5, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Welcome to our app</h1>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %}
+  App
+{% endblock %}
+
+{% block heading %}
+  Welcome to our app
+{% endblock %}
+
+{% block urls %}
+  You are at '/app' route
+{% endblock %}
