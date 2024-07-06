@@ -1,4 +1,5 @@
 {% load static %}
+{% load static tailwind_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,14 +12,15 @@
     {% endblock %}
   </title>
   <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  {% tailwind_css %}
 </head>
 <body>
-  <h1>
+  <h1 class="bg-indigo-700 text-4xl">
     {% block heading %}
       Heading
     {% endblock %}
   </h1>
-  <h3>
+  <h3 class="bg-pink-400 text-4xl">
     {% block urls %}
       URL
     {% endblock %}
