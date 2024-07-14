@@ -5,9 +5,21 @@
 {% endblock %}
 
 {% block heading %}
-  Welcome to our app
 {% endblock %}
 
 {% block urls %}
-  You are at '/app' route
+  {% for it in obj %}
+    <div class="chai-item w-[25vw] bg-black text-white rounded-xl p-3">
+      <img class="rounded-xl" src="{{ it.image.url }}" alt="{{ it.name }}">
+      <h1 class="text-bold text-xl">{{ it.name }}</h1>
+      <h3>Capital: {{ it.capital }}</h3>
+      <h3>{{ it.description }}</h3>
+      <a href="{% url 'country_detail' country_name=it.name %}">
+        <button class="my-3 mx-1 bg-sky-700 p-3 rounded-xl">
+          Visit {{it.name}}
+        </button>
+      </a>
+    </div>
+    
+  {% endfor %}
 {% endblock %}
